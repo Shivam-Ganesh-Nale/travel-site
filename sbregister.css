@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    background: url(img.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    backdrop-filter: blur(20px);
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid rgb(58, 178, 252);
+    box-shadow: 0 0 7px 5px rgba(0,0,0,0.5);
+}
+.container h1{
+    font-size:24px;
+    line-height: 24px;
+    padding: 30px;
+    text-align: center;
+}
+.input-name{
+    width: 100%;
+    position: relative;
+    margin: 30px auto;
+    
+}
+.input-name i{
+    backdrop-filter: blur(20px);
+    padding: 8px 11px;
+}
+.fname{
+    padding: 8px 0 8px 40px;
+    width: 45%;
+}
+.input-name span{
+    margin-left: 35px;
+}
+.text-name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.email{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.password{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    color: blue;
+    border-right: 1px solid #cccccc;
+}

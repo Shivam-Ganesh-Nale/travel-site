@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - SB Travel</title>
+  <link rel="stylesheet" href="sbreg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <a href="home.html" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i> Back to Home
+  </a>
+
+  <div class="wrapper">
+    <div class="form-box register">
+      <h2>Create an Account</h2>
+      <form action="sblogin2.html" name="myform" onsubmit="return validateForm()">
+        
+        <div class="input-row">
+          <div class="input-box" style="margin-top:0;">
+            <i class="fa-solid fa-user icon"></i>
+            <input type="text" placeholder="First Name" class="fname" id="fname" name="fname" required>
+            <div class="formerror" id="fname-error"></div>
+          </div>
+          <div class="input-box" style="margin-top:0;">
+            <i class="fa-solid fa-user icon"></i>
+            <input type="text" placeholder="Last Name" class="fname" id="lname" name="lname" required>
+            <div class="formerror" id="lname-error"></div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <i class="fa-solid fa-envelope icon"></i>
+          <input type="email" placeholder="Email Address" class="email" id="email" name="email" required>
+          <div class="formerror" id="email-error"></div>
+        </div>
+
+        <div class="input-box">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" placeholder="Password" class="password" id="password" name="password" required>
+          <div class="formerror" id="password-error"></div>
+        </div>
+
+        <div class="input-box">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" placeholder="Confirm Password" class="password" id="cpassword" name="cpassword" required>
+          <div class="formerror" id="cpassword-error"></div>
+        </div>
+
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female" required> Female</label>
+        </div>
+
+        <div class="input-box">
+          <i class="fa-solid fa-globe icon"></i>
+          <select class="country" id="country" name="country" required>
+            <option value="" disabled selected>Select a country</option>
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Japan">Japan</option>
+            <option value="Russia">Russia</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="check-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I accept the terms and conditions</label>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+
+        <div class="login-register">
+          <p>Already have an account? <a href="sblogin2.html" class="register-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="sbreg.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Form</title>
+        <link rel="stylesheet" href="sbregister.css">
+        <script src="https://kit.fontawesome.com/d81996f93b.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+        
+        <form action="/myaction.php" name="myform" onsubmit="return validateform()" method="post">
+            
+        <div class="input-name" id="myform">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="First Name" class="fname" id="fname" required>
+            <div class="formerror"></div>
+            <span>
+                <i class="fa fa-user"></i> 
+                <input type="text" placeholder="Last Name" class="fname" id="lname" required>
+            </span>
+        </div>
+
+        <div class="input-name">
+            <i class="fa fa-user"></i>
+            <input type="Email" placeholder="Email" class="email" id="email" required>
+            <div class="input-name" id="Email">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="password" class="email" id="password" required>
+            <div class="input-name" id="password">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder=" confirm password" class="text-name" id="cpassword" required>
+                    <div class="input-name">
+                        <input type="radio" class="radio-button" name="r1">
+                        <label>Male</label>
+                        <input type="radio" class="radio-button" name="r1">
+                        <label>Female</label>
+                    </div>
+
+                    <div>
+                        <select class="country">
+                            <option>Select a country</option>
+                            <option>India</option>
+                            <option>America</option>
+                            <option>South Africa</option>
+                            <option>Japan</option>
+                            <option>Russia</option>
+                        </select>
+                        <div class="arrow">
+
+                        </div>
+                    </div>
+                    <div class="input-name">
+                        <input type="checkbox" class="check-button">
+                        <label>I accept the terms and conditions</label>
+                    </div>
+                    <div class="input-name">
+                        <input type="submit" class="sub-button" value="Register">
+                        
+
+                    </div>
+        </div>
+    </form>
+    </body>
+</html>

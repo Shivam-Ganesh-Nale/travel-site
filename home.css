@@ -1,0 +1,444 @@
+/* Tour My India Inspired Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-orange: #ff6600;
+  --secondary-orange: #e65c00;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #fafafa;
+  --bg-white: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header Navbar */
+header {
+  background-color: var(--bg-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.navbar a:hover {
+  color: var(--primary-orange);
+}
+
+/* Signup button styled as an outline/text button to keep focus on main CTAs later */
+.signup-btn {
+  background-color: var(--primary-orange);
+  color: #fff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+}
+
+.signup-btn:hover {
+  background-color: var(--secondary-orange);
+}
+
+/* Split Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  min-height: 85vh;
+  background-color: var(--bg-light);
+  padding: 2rem 5% 0;
+  position: relative;
+  gap: 3rem;
+}
+
+/* Left: Vertical Banner Image */
+.hero-image-vertical {
+  position: relative;
+  height: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  min-height: 500px;
+}
+
+.hero-image-vertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image-vertical .overlay-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-image-vertical h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-image-vertical p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Right: Typography and Carousels */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  font-weight: 800;
+  color: var(--primary-orange);
+}
+
+.hero-content > p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 90%;
+  margin-bottom: 3rem;
+}
+
+/* Mini Card Grid (Services mimicking the Tour Packages) */
+.mini-card-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mini-card {
+  background: var(--bg-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f1f5f9;
+  transition: var(--transition);
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.card-header i {
+  font-size: 1.8rem;
+  color: var(--text-muted);
+}
+
+.mini-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.mini-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Sticky Action Bar at bottom of Hero */
+.action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.02);
+}
+
+.action-bar-tabs {
+  display: flex;
+  gap: 3rem;
+}
+
+.action-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.action-tab i {
+  font-size: 1.5rem;
+}
+
+.action-tab:hover, .action-tab.active {
+  color: var(--primary-orange);
+}
+
+.action-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.phone-number {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phone-number i {
+  color: var(--primary-orange);
+}
+
+.plan-trip-btn {
+  background-color: var(--primary-orange);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.plan-trip-btn:hover {
+  background-color: var(--secondary-orange);
+}
+
+/* Section Wrapper */
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h5 {
+  color: var(--primary-orange);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* Destinations Grid */
+.top-selling {
+  padding: 6rem 5%;
+  background-color: var(--bg-white);
+}
+
+.destination-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.destination-card {
+  background: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid #f1f5f9;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.dest-info {
+  padding: 1.5rem;
+}
+
+.destination-card h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.destination-card h4 span {
+  color: var(--primary-orange);
+  font-size: 1.1rem;
+}
+
+.destination-card p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.dest-info button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: transparent;
+  color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dest-info button:hover {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f5f9;
+  color: var(--text-dark);
+  padding: 4rem 5% 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.footer-col li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.footer-col a:hover {
+  color: var(--primary-orange);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #cbd5e1;
+  color: #94a3b8;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-image-vertical {
+    min-height: 400px;
+  }
+  .action-bar {
+    position: relative;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 5%;
+  }
+}
